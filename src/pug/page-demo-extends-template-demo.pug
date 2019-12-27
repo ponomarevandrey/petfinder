@@ -1,0 +1,212 @@
+extends template-demo.pug
+
+
+
+block meta
+  meta(name='description' content='Description of the page less than 150 characters')
+  //- Displayed in Google search results:
+  meta(name='keywords' content='web development, web applications, frontend')
+  meta(name='author' content='Andrey Ponomarev')
+  title Demo
+
+
+
+block head
+  style. 
+
+
+
+block header
+//-
+  p(class='text text_display_block')
+    include:markdown-it ../readme.md
+
+
+
+block main
+
+//- the code below not validated!
+  //- form + grid-forms (usage example)
+  div
+    //- example 1:
+    form(class='grid-forms' action='' method='')
+      
+      div(class='form-group')
+        label(
+          class='form-group__label' 
+          for='name') A long sentence you're forced to read to understand what this stupid form wants from you
+        div(class='form-group__container')
+          input(
+            class='form-group__input' 
+            type='text' 
+            id='name' 
+            name='name' 
+            placeholder='Your name')
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+      
+      div(class='form-group form-group_row')
+        label(
+          class='form-group__label' 
+          for='name') Phone/Mobile
+        div(class='form-group__container')
+          input(
+            class='form-group__input' 
+            type='text' 
+            id='name' 
+            name='name' 
+            placeholder='Your name')
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      div(class='form-group')
+        label(
+          class='form-group__label' 
+          for='name') A long 
+        div(class='form-group__container')
+          input(
+            class='form-group__input' 
+            type='text' 
+            id='name' 
+            name='name' 
+            placeholder='Your name')
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      div(class='form-group form-group')
+        label(
+          class='form-group__label' 
+          for='name') First name
+        div(class='form-group__container')
+          input(
+            class='form-group__input' 
+            type='text' 
+            id='name' 
+            name='name' 
+            placeholder='Your name')
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      div(class='form-group form-group_row')
+        label(
+          class='form-group__label' 
+          for='name') First name
+        div(class='form-group__container')
+          input(
+            class='form-group__input' 
+            type='text' 
+            id='name' 
+            name='name' 
+            placeholder='Your name')
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      div(class='form-group form-group_row')
+        label(
+          class='form-group__label' 
+          for='text1') Textarea
+        div(class='form-group__container')
+          textarea(
+            class='form-group__input form-group__input_type_textarea' 
+            type='text' 
+            id='text1' 
+            name='story') Default text
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      //- form validation error
+      div(class='form-group form-group_validation_error form-group_row text')
+        label(
+          class='form-group__label' 
+          for='text1') Textarea
+        div(class='form-group__container')
+          textarea(
+            class='form-group__input form-group__input_type_textarea' 
+            type='text' 
+            id='text1' 
+            name='story') Default text
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      //- form validation success
+      div(class='form-group form-group_validation_success form-group_row text')
+        label(
+          class='form-group__label' 
+          for='text1') Textarea
+        div(class='form-group__container')
+          textarea(
+            class='form-group__input form-group__input_type_textarea' 
+            type='text' 
+            id='text1' 
+            name='story') Default text
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      //- form-group disabled
+      div(class='form-group form-group_row form-group_disabled')
+        label(
+          class='form-group__label' 
+          for='name9') First name
+        div(class='form-group__container')
+          input(
+            class='form-group__input' 
+            type='text' 
+            id='name9' 
+            name='name' 
+            placeholder='Your name'
+            disabled)
+          div(class='form-group__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galle
+
+      //- form-group search
+      div(class='form-group form-group_row')
+        label(
+          class='form-group__label' 
+          for='name') Search
+        div(class='form-group__container')
+          input(
+            class='form-group__input form-group__input_type_search' 
+            type='text' 
+            id='name' 
+            name='name' 
+            placeholder='Search...')
+
+      //- fieldset
+      fieldset
+        div(class='form-group form-group_row')
+          legend(class='form-group__label') First name
+
+          div
+            div(class='form-group__container control')
+              input(
+                class='control__system-control'
+                id='f1' 
+                type='radio'
+                value='1'  
+                name='group1')
+              label(
+                class='control__label control__label_radio' 
+                for='f1') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting !!!
+              div(class='control__tip text text_line-height_lg text_color_gray-light text_size_sm') Text text text
+
+            div(class='form-group__container control')
+              input(
+                class='control__system-control'
+                id='f2' 
+                type='radio'  
+                value='2'
+                name='group1')
+              label(
+                class='control__label control__label_radio' 
+                for='f2') Milk
+              div(class='control__tip text text_line-height_lg text_color_gray-light text_size_sm') Help text Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting
+
+            div(class='form-group__container control')
+              input(
+                class='control__system-control'
+                id='f3' 
+                type='radio' 
+                value='3' 
+                name='group1')
+              label(
+                class='control__label control__label_radio'
+                for='f3') Milk
+              div(class='control__tip text text_line-height_lg text_color_gray-light text_size_sm') Text text text       
+
+
+
+block footer
+
+block script
+

@@ -1,0 +1,82 @@
+.select {
+  position: relative;
+  width: 100%;
+
+  // hide system select box
+  &__system {
+    display: none;
+  }
+
+  // Style options (<option>):
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    z-index: $zindex-dropdown;
+
+    background-color: $color_gray;
+
+    // Hide the options when the select box is closed:
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__selected-option {
+    background-color: $color_black;
+  }
+
+  // style the options (<option>), including the selected item:
+  &__options div,
+  &__selected-option {
+    padding: 8px 16px;
+
+    color: $color_white;
+
+    border: 1px solid transparent;
+
+    cursor: pointer;
+  }
+
+  &__options div:not(:last-child),
+  &__selected-option:not(:last-child) {
+    border-color: transparent transparent $color_black transparent;
+  }
+
+  &__options div:hover {
+    background-color: $color_gray-light;
+    color: $color_black;
+  }
+
+  // Point the arrow upwards when the select box is open (active)
+  &__selected-option.select__arrow_down:after {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+
+    width: 0;
+    height: 0;
+
+    border: 8px solid transparent;
+    border-color: $color_white transparent transparent transparent;
+
+    content: "";
+  }
+
+  // Point the arrow upwards when the select box is open (active)
+  &__selected-option.select__arrow_up:after {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+
+    width: 0;
+    height: 0;
+
+    border: 8px solid transparent;
+    border-color: transparent transparent $color_white transparent;
+
+    content: "";
+  }
+}

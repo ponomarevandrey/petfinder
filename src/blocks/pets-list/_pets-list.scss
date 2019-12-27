@@ -1,0 +1,9 @@
+.pets-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f9f2ec;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+}
