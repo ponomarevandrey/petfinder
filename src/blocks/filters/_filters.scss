@@ -1,0 +1,9 @@
+.filters {
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid $color_gray-lighten;
+}

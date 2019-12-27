@@ -1,0 +1,53 @@
+.pet-card {
+  position: relative;
+
+  flex: 1 1 auto;
+  margin: 0.5rem;
+  max-width: 260px;
+  overflow: hidden;
+
+  color: white;
+  text-align: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  background-color: #4d3319;
+
+  &:hover {
+    background-color: #60401f;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+
+    text-align: center;
+    color: $color_white;
+
+    background-color: #60401f;
+  }
+
+  &__photo {
+    border-radius: 0.3rem;
+    width: 100%;
+  }
+
+  &__name {
+    margin: 1rem;
+  }
+
+  &__arrow {
+    width: 3rem;
+    margin-top: 0.5rem;
+  }
+}
