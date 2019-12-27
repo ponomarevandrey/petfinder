@@ -12,7 +12,7 @@ requireFiles(require.context("./img/", true, /(svg|png|jpg)$/));
  * CSS RESET *
  *************/
 
-import "biscuit-components/_reset.scss";
+import "./blocks/_reset.scss";
 
 /**********
  * BLOCKS *

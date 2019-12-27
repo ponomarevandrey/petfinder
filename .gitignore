@@ -49,7 +49,6 @@
 *.code-workspace                           
 
 # other
-dist/
 node_modules/
 package-lock.json
 local-src/
