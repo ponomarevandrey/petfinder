@@ -101,8 +101,8 @@ petsList.classList.add("pets-list");
 main.appendChild(petsList);
 
 // API auth. data:
-const petfinderAPIkey = "oKzKhXQZZ7z6VgqpjZf8cj13LTHPZIMVpIeMQzEMIyb90qQwEQ";
-const petfinderSecret = "tHd2J6r9yuN7l0qpXzk3obBKDwwBqk49ZBc6LLFo";
+const petfinderAPIkey = "HElJeY6UQ26yB3orXV7GLRY1fvfqCnUjzpD3JzaW5ebfKkUx1F";
+const petfinderSecret = "VGqlSqpqtASeADlQoG58tMRHIwRfv8o0JfRB20PV";
 const url = "https://api.petfinder.com/v2/oauth2/token";
 
 // authorize in API:
